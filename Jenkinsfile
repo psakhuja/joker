@@ -1,6 +1,7 @@
 pipeline {
   agent any
   options { ansiColor('xterm') }
+  properties {disableConcurrentBuilds()}
   environment {
     COMMIT_HASH = sh(returnStdout: true, script: 'git rev-parse --short HEAD').trim()
     F8_TAG = "$BRANCH_NAME-$BUILD_ID-$COMMIT_HASH"
