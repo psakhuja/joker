@@ -1,7 +1,6 @@
 pipeline {
   agent any
   options {
-    ansiColor('xterm')
     disableConcurrentBuilds()
   }
   environment {
